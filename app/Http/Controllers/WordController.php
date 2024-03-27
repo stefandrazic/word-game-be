@@ -12,7 +12,7 @@ class WordController extends Controller
         $word = strtolower($request->input('word'));
 
         if (!$this->isValidWord($word)) {
-            return response()->json(['error' => 'Invalid word'], 400);
+            return response()->json(['error' => 'Invalid word'],);
         }
 
         $score = $this->calculateScore($word);
